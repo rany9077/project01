@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+}
+@font-face {
+    font-family: 'lato';
+    src: url("https://use.typekit.net/tfr0kwv.css")
+}
+@font-face {
+    font-family: 'NotoSansKr';
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR&display=swap")
+}
