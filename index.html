@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>국립제주박물관</title>
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./font/font.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <meta name="robots" content="index,follow" />
     <meta name="description" content="국립제주박물관 홈페이지입니다" />
     <meta name="author" content="김란" />
@@ -33,16 +33,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="pj01_favicon.ico/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="pj01_favicon.ico/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="pj01_favicon.ico/favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="pj01_favicon.ico/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="pj01_favicon.ico/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slide.js"></script>
   </head>
   <body>
     <div id="wrap">
       <header>
         <div id="gnb">
-          <div id="header_top" class="bg1">
+          <div id="header_top">
             <div class="container cf">
               <ul class="fl info">
                 <li><span>관람시간</span>09:00~18:00</li>
@@ -71,7 +73,7 @@
           <!-- //#header-top -->
           <div id="header_nav">
             <div class="container cf">
-              <ul id="nav" class="cf">
+              <ul id="nav">
                 <li class="logo fl">
                   <h1>
                     <a href="https://jeju.museum.go.kr/html/kr/index.html#0">로고</a>
@@ -342,7 +344,7 @@
                   </div>
                 </li>
                 <!-- //.m_6 -->
-                <div class="util_wrap fr">
+                <li class="util_wrap fr">
                   <select name="lang" title="언어" class="fl">
                     <option>KOR</option>
                     <option>ENG</option>
@@ -351,7 +353,7 @@
                   </select>
                   <a href="#">검색</a>
                   <a href="#">메뉴</a>
-                </div>
+                </li>
                 <!-- //.util_wrap -->
               </ul>
             </div>
@@ -368,18 +370,21 @@
           </div>
         </div>
         <!-- //#title -->
-        <div id="header_slide">
-          <div class="container cf">
-            <div class="slide_control fr">
-              <button type="button"><span class="pause">정지</span></button>
-              <button type="button"><span class="left">왼쪽</span></button>
-              <span class="page">01&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;02</span>
-              <button type="button"><span class="right">오른쪽</span></button>
-            </div>
-            <div class="slide_bg1">
-              <a href="#"></a>
-            </div>
+        <div id="mainVisual">
+          <ul class="visual_slide">
+            <li class="visual_0"><a href="#">배너이미지1</a></li>
+            <li class="visual_1"><a href="#">배너이미지2</a></li>
+          </ul>
+          <div class="btnImg">
+            <button type="button" class="stop"></button>
+            <button type="button" class="prev"></button>
+            <button type="button" class="next"></button>
           </div>
+          <ul class="buttonList">
+            <li class="on"><a href="#" class="hidden">배너1</a></li>
+            <li><a href="#" class="hidden">배너2</a></li>
+            <li><a href="#" class="hidden">배너3</a></li>
+          </ul>
         </div>
       </header>
       <!-- //#header -->
@@ -404,7 +409,7 @@
             <ul class="list">
               <li>
                 <div class="img_area">
-                  <a href="#"><img src="./img/content1_1.jpg" class="img1_1" alt="" /></a>
+                  <a href="#"><img src="./img/content1_1.jpg" class="img1_1" alt="여름방학프로그램 호시탐탐 박물관" /></a>
                 </div>
                 <div class="text_area">
                   <div class="state1 fl">예정</div>
@@ -418,7 +423,7 @@
             <ul class="list">
               <li>
                 <div class="img_area">
-                  <a href="#"><img src="./img/content1_2.jpg" class="img1_2" alt="" /></a>
+                  <a href="#"><img src="./img/content1_2.jpg" class="img1_2" alt="토요박물관 산책" /></a>
                 </div>
                 <div class="text_area">
                   <div class="state2 fl">마감</div>
@@ -432,7 +437,7 @@
             <ul class="list">
               <li>
                 <div class="img_area">
-                  <a href="#"><img src="./img/content1_3.jpg" class="img1_3" alt="" /></a>
+                  <a href="#"><img src="./img/content1_3.jpg" class="img1_3" alt="세한도 특별전" /></a>
                 </div>
                 <div class="text_area">
                   <div class="state3">지난전시</div>
@@ -449,30 +454,30 @@
 
       <div id="content2">
         <div class="content2_bg">
-          <div class="slide_button">
-            <div class="left_button">
-              <a href="#"></a>
-            </div>
-            <div class="right_button fr">
-              <a href="#"></a>
-            </div>
+          <div class="left_button">
+            <a href="#"></a>
+          </div>
+          <div class="right_button">
+            <a href="#"></a>
           </div>
           <div class="container cf">
-            <div class="title_area fl">
-              <h2>상설전시</h2>
-              <p class="content2_title"></p>
-              <div class="sub_text">
-                <p class="sub_title">중앙홀</p>
-                <p class="sub_content">
-                  국립제주박물관 상설전시실의 첫 관문인 중앙홀 천정에는 한라산 백록담 전설과 탐라 개국신화인 &lt;삼성신화&gt;, 제주를 상징하는
-                  삼다(三多: 돌, 바람, 여자)를 재해석한 스테인드글라스가 설치되어 있습니다. 제주의 신비로움과 섬 전체를 감싸 안은 듯 제주를 품고 있는
-                  한라산의 포근함을 마주할 수 있는 공간입니다.
-                </p>
+            <div class="slide_1">
+              <div class="title_area">
+                <h2>상설전시</h2>
+                <p class="content2_title"></p>
+                <div class="sub_text">
+                  <p class="sub_title">중앙홀</p>
+                  <p class="sub_content">
+                    국립제주박물관 상설전시실의 첫 관문인 중앙홀 천정에는 한라산 백록담 전설과 탐라 개국신화인 &lt;삼성신화&gt;, 제주를 상징하는
+                    삼다(三多: 돌, 바람, 여자)를 재해석한 스테인드글라스가 설치되어 있습니다. 제주의 신비로움과 섬 전체를 감싸 안은 듯 제주를 품고
+                    있는 한라산의 포근함을 마주할 수 있는 공간입니다.
+                  </p>
+                </div>
+                <div class="button_more"><a href="#">MORE</a></div>
               </div>
-              <div class="button_next"><a href="#">MORE</a></div>
-            </div>
-            <div class="content2_img">
-              <a href="#"></a>
+              <div class="content2_img">
+                <a href="#"><img src="./img/exhibition1.jpg" alt="중앙홀" width="990" /></a>
+              </div>
             </div>
             <div class="content2_control">
               <span class="page">01&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;08</span>
@@ -484,9 +489,9 @@
       <!-- //#content2 -->
 
       <div id="content3">
-        <div class="container">
+        <div class="container cf">
           <div class="section_wrap">
-            <section class="information cf">
+            <section class="information">
               <h2 class="sec_title"><span>관람</span>안내</h2>
               <ul class="sec_info">
                 <li class="time">
@@ -509,28 +514,92 @@
             </section>
             <section class="reservation">
               <h2 class="sec_title"><span>예약</span>서비스</h2>
+              <a href="#" class="more">더보기</a>
               <ul class="sec_link">
-                <li>통합예약정보</li>
-                <li>교육프로그램예약</li>
-                <li>문화행사예약</li>
-                <li>단체관람예약</li>
+                <li><a href="#">통합예약정보</a></li>
+                <li><a href="#">교육프로그램예약</a></li>
+                <li><a href="#">문화행사예약</a></li>
+                <li><a href="#">단체관람예약</a></li>
               </ul>
             </section>
             <section class="banner">
               <h2 class="sec_title">알립니다</h2>
+              <a href="#" class="banner_img"><img src="./img/popup.jpg" alt="2022년도 대체휴관일 안내 바로가기" /></a>
               <div class="slide_control">
                 <span class="page">01&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;01</span>
                 <button type="button"><span class="pause">정지</span></button>
               </div>
-              <div class="banner_img">img</div>
             </section>
+            <div class="banner_bar">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="img_area"></div>
+                    <div class="text_area">
+                      <p class="top">보고 느끼고 만지며 배우는</p>
+                      <p class="bottom">어린이박물관</p>
+                      <div class="more">바로가기</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="img_area"></div>
+                    <div class="text_area">
+                      <p class="top">온라인으로 즐기는 국립제주박물관</p>
+                      <p class="bottom">VR서비스</p>
+                      <div class="more">바로가기</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <!-- //#content3 -->
-
-      <footer id="footer" class="bg2">
-        <div class="container">footer</div>
+      <footer id="footer">
+        <div class="container">
+          <div class="footer_logo"><img src="./img/footer_logo.png" alt="문화체육관광부 국립제주박물관 로고" /></div>
+          <div class="footer_info">
+            <ul>
+              <li>
+                <a href="#"><span>개인정보처리방침</span></a>
+              </li>
+              <li><a href="#">저작권정책</a></li>
+              <li><a href="#">CCTV운영관리방침</a></li>
+              <li><a href="#">고객민원</a></li>
+            </ul>
+            <address>
+              주소.63284 제주특별자치도 제주시 일주동로-17
+              <span>Tel. 064-720-8000</span>
+              <span>Fax. 064-720-8050</span>
+            </address>
+            <p class="copyright">Copyright(c) JEJU NATIONAL MUSEUM.All rights reserved.</p>
+          </div>
+          <select name="select" id="site_box">
+            <option>Familiy Site</option>
+            <option>국립중앙박물관</option>
+            <option>국립경주박물관</option>
+            <option>국립광주박물관</option>
+            <option>국립진주박물관</option>
+            <option>국립부여박물관</option>
+            <option>국립공주박물관</option>
+            <option>국립진주박물관</option>
+            <option>국립청주박물관</option>
+            <option>국립대구박물관</option>
+          </select>
+          <ul class="fr link">
+            <li class="sns">
+              <a href="#" target="blank" class="instagram">인스타그램</a>
+              <a href="#" target="blank" class="twitter">트위터</a>
+              <a href="#" target="blank" class="facebook">페이스북</a>
+              <a href="#" target="blank" class="blog">블로그</a>
+              <a href="#" target="blank" class="youtube">유투브</a>
+            </li>
+          </ul>
+          <div class="fr mark"></div>
+        </div>
       </footer>
     </div>
     <!-- //#wrap -->
