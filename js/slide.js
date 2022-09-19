@@ -6,11 +6,13 @@ $(function () {
     slide = visualWrap.find(".visual_slide>li"),
     slideCount = slide.length,
     stopTimer,
+    stopBtn = visualWrap.find(".btnImg > .play"),
+    stopBtn = visualWrap.find(".btnImg > .stop"),
     leftBtn = visualWrap.find(".btnImg > .prev"),
     rightBtn = visualWrap.find(".btnImg > .next"),
     pager = visualWrap.find(".buttonList > li"),
-    current = 0;
-
+    current = 0,
+    isStop = false;
   /**
    슬라이드 위치 설정
    */
@@ -41,6 +43,7 @@ $(function () {
       move(next, "100%", "0%");
       var nextPager = pager.eq(current);
       nextPager.addClass("on");
+      cnt(current);
     }, 3000);
   }
 
@@ -50,6 +53,23 @@ $(function () {
   function move(tg, start, end) {
     tg.css("left", start).stop().animate({ left: end }, 1000);
   }
+
+  /**
+   * 재생, 일시정지 버튼 UI
+   */
+  stopBtn.click(function () {
+    if (!isStop) {
+      // $(this).text("go play");
+      $(this).css("background", "url(img/play.png)");
+      clearInterval(stopTimer);
+      isStop = true;
+    } else {
+      // $(this).text("go stop");
+      $(this).css("background", "url(img/stop.png)");
+      timer();
+      isStop = false;
+    }
+  });
 
   /**
    * 좌우 버튼 UI
@@ -87,22 +107,12 @@ $(function () {
   });
 
   /**
-   * 페이저 UI
+   * 카운터 동적생성
    */
-  pager.click(function () {
-    var tg = $(this);
-    var i = tg.index();
-    pager.removeClass("on");
-    tg.addClass("on");
-    pagerMove(i);
-  });
-
-  function pagerMove(i) {
-    if (current == i) return;
-    var currentEl = slide.eq(current);
-    var nextEl = slide.eq(i);
-    currentEl.css("left", "0").stop().animate({ left: "-100%" }, 500);
-    nextEl.css("left", "100%").stop().animate({ left: "0%" }, 500);
-    current = i;
+  var counterEl = "<span class='counter'>1";
+  $("#mainVisual").append(counterEl);
+  var counter = $(".counter");
+  function cnt(n) {
+    counter.html(n + 1);
   }
 }); //jQuery

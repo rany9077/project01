@@ -410,14 +410,15 @@ header {
 .btnImg img {
   background-repeat: no-repeat;
 }
+
 .btnImg .stop {
   background-image: url(../img/control_button.png);
   position: absolute;
-  background-position: 0 -8px;
-  width: 35px;
+  background-position: 1px -4px;
+  width: 25px;
   height: 25px;
   background-color: transparent;
-  left: -50px;
+  left: -65px;
   cursor: pointer;
 }
 .btnImg .prev {
@@ -440,38 +441,35 @@ header {
   cursor: pointer;
 }
 
-/* pager */
-.hidden {
-  display: block;
-  overflow: hidden;
-  width: 0;
-  height: 0;
-  line-height: 0;
-  text-indent: -99999px;
+/* counter */
+#mainVisual > .counter {
+  position: absolute;
+  right: 23%;
+  top: 11%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: "Montserrat";
 }
-.buttonList {
-  position: relative;
-  bottom: 10%;
-}
-#mainVisual .buttonList:after {
+.counter_total::before {
   content: "";
   display: block;
-  clear: both;
+  position: absolute;
+  right: 30px;
+  top: 6px;
+  width: 2px;
+  height: 10px;
+  background-color: #000;
+  transform: skew(-20deg);
+  transform-origin: center;
 }
-#mainVisual .buttonList > li {
-  background: url(../images/btnVisual.png) no-repeat 0 -22px;
-  background-size: 20px;
-  width: 24px;
-  height: 22px;
-  overflow: hidden;
-  position: relative;
-  left: 45%;
-  float: left;
-  margin: 0 8px;
-  cursor: pointer;
-}
-#mainVisual .buttonList > li.on {
-  background-position: 0 0;
+.counter_total {
+  position: absolute;
+  right: 20%;
+  top: 11%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Montserrat";
+  color: #afafaf;
 }
 
 /* content1 */
