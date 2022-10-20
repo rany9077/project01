@@ -8,7 +8,7 @@
   -webkit-font-smoothing: antialiased;
 }
 html {
-  overflow-x: hideen;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 body,
