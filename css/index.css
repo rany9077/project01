@@ -694,6 +694,7 @@ header {
   margin-left: -10px;
   width: 515px;
   height: 200px;
+  text-indent: -9999px;
 }
 #content2 .sub_title {
   font-size: 28px;
