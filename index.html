@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>국립제주박물관</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./font/font.css" />
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <meta name="robots" content="index,follow" />
     <meta name="description" content="국립제주박물관 홈페이지입니다" />
     <meta name="author" content="김란" />
@@ -37,6 +33,10 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="pj01_favicon.ico/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./font/font.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="./js/slide.js"></script>
   </head>
@@ -449,36 +449,91 @@
       <!-- //#content1 -->
 
       <div id="content2">
-        <div class="content2_bg">
-          <div class="left_button">
-            <a href="#"></a>
+        <div class="container cf">
+          <div class="content2_title">
+            <div class="top_title">상설전시</div>
+            <h2 class="main_title"></h2>
+            <div class="more">MORE</div>
           </div>
-          <div class="right_button">
-            <a href="#"></a>
-          </div>
-          <div class="container cf">
-            <div class="slide_1">
-              <div class="title_area">
-                <h2>상설전시</h2>
-                <p class="content2_title"></p>
-                <div class="sub_text">
-                  <p class="sub_title">중앙홀</p>
-                  <p class="sub_content">
-                    국립제주박물관 상설전시실의 첫 관문인 중앙홀 천정에는 한라산 백록담 전설과 탐라 개국신화인 &lt;삼성신화&gt;, 제주를 상징하는
-                    삼다(三多: 돌, 바람, 여자)를 재해석한 스테인드글라스가 설치되어 있습니다. 제주의 신비로움과 섬 전체를 감싸 안은 듯 제주를 품고
-                    있는 한라산의 포근함을 마주할 수 있는 공간입니다.
-                  </p>
-                </div>
-                <div class="button_more"><a href="#">MORE</a></div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p class="sub_title" data-swiper-parallax="-1000">중앙홀</p>
+                <p class="sub_content" data-swiper-parallax="-900">
+                  국립제주박물관 상설전시실의 첫 관문인 중앙홀 천정에는 한라산 백록담 전설과 탐라 개국신화인 &lt;삼성신화&gt;, 제주를 상징하는
+                  삼다(三多: 돌, 바람, 여자)를 재해석한 스테인드글라스가 설치되어 있습니다. 제주의 신비로움과 섬 전체를 감싸 안은 듯 제주를 품고 있는
+                  한라산의 포근함을 마주할 수 있는 공간입니다.
+                </p>
+                <img src="./img/exhibition1.jpg" />
               </div>
-              <div class="content2_img">
-                <a href="#"><img src="./img/exhibition1.jpg" alt="중앙홀" width="990" /></a>
+              <div class="swiper-slide">
+                <p class="sub_title" data-swiper-parallax="-1000">섬,제주</p>
+                <p class="sub_content" data-swiper-parallax="-900">
+                  우뚝 솟은 한라산과 수백 개의 오름이 있고 곶자왈의 푸름으로 덮여 있는 신비롭고 아름단운 풍광을 가진 섬. 약하게 부는 바람(지름새)에서
+                  예기치 못하게 강하게 부는 바람(궁근새)처럼, 고요한 삶의 터전이자 격한 시련의 공간으로 제주 사람들의 이야기가 오롯이 담긴 섬. 그 섬
+                  이야기, 국립제주박물관에서 들려드립니다.
+                </p>
+                <img src="./img/exhibition2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <p class="sub_title" data-swiper-parallax="-1000">선사시대 제주</p>
+                <p class="sub_content" data-swiper-parallax="-900">
+                  제주는 180만 년 전부터 10만 년 전까지 여러 차례에 걸친 화산 활동으로 만들어졌습니다. 한반도에서 제주로 이동하여 살았던 구석기시대
+                  사람들은 주로 동굴이나 바위그늘에 살면서 사냥과 채집을 하였습니다. 이들은 각종 뗀석기와 정교하게 만든 돌날, 좀돌날 등을 제작하여
+                  생활도구로 사용하였습니다.
+                </p>
+                <img src="./img/exhibition3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <p class="sub_title" data-swiper-parallax="-1000">섬마을의 발전과 변화</p>
+                <p class="sub_content" data-swiper-parallax="-900">
+                  제주의 청동기문화는 한반도 중남부 지역과의 지속적인 교류로 형성되어 발전하였습니다. 제주도 각지에 청동기시대 사람들이 모여 살았던 큰
+                  마을이 형성되었습니다. 조개껍질을 이용하여 장신구를 만들기도 하였습니다. 돌을 갈아 만든 간석기를 도구로 사용하였고 특정 계층은
+                  청동기를 소유하였습니다.
+                </p>
+                <img src="./img/exhibition4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <p class="sub_title" data-swiper-parallax="-1000">탐라국</p>
+                <p class="sub_content" data-swiper-parallax="-900">
+                  한반도에서 고구려•백제•신라•가야가 고대 국가로 성장하는 시기 제주에 세워진 ‘탐라국’의 문화를 소개합니다. 탐라에는 강력한 지배계층이
+                  있었고, 섬 전체가 동일한 문화 양식을 공유하였으며, 활발한 해상활동을 전개하였습니다. 이야기, 국립제주박물관에서 들려드립니다.
+                  이야기, 국립제주박물관에서 들려드립니다.
+                </p>
+                <img src="./img/exhibition5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <p class="sub_title" data-swiper-parallax="-1000">고려시대 제주</p>
+                <p class="sub_content" data-swiper-parallax="-900">
+                  탐라국은 고려의 행정단위인 ‘탐라군’이 되면서 ‘나라’의 지위를 잃게 되었습니다. 탐라는 고려의 영향으로 청자가 유입되었고 불교문화를
+                  받아들였습니다. 몽골군의 침입에 대항하던 삼별초의 마지막 거점이었으나, 삼별초가 여몽 연합군에게 패하면서 제주는 중국 원나라
+                  탐라총관부의 통치를 받게 되었습니다.
+                </p>
+                <img src="./img/exhibition6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <p class="sub_title" data-swiper-parallax="-1000">조선시대 제주</p>
+                <p class="sub_content" data-swiper-parallax="-900">
+                  조선시대 제주는 성리학을 통치 이념으로 삼고 중앙집권적인 왕도정치를 지향한 조선의 지방통치제도에 의해 운영되었습니다. 외적의
+                  침입으로 어려운 생활을 이어갔지만 제주에 부임한 관리, 표류로 인해 바깥세상을 경험하고 온 사람들은 제주 사람들에게
+                  정치•사회•문화적으로 많은 영향을 주었습니다.
+                </p>
+                <img src="./img/exhibition7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <p class="sub_title" data-swiper-parallax="-1000">제주섬 사람</p>
+                <p class="sub_content" data-swiper-parallax="-900">
+                  제주도는 용암으로 만들어진 화산섬으로, 사람들이 살기에는 척박하고 힘겨운 생존의 공간이었습니다. 바다로 둘러싸인 제주는 열린 섬으로
+                  여러 문화가 들어오기도 하였고, 고립된 섬으로 고유의 전통을 유지하기도 하였습니다. 그렇게 제주인은 소박하지만 강건한 그들만의 문화를
+                  싹틔워 나갔습니다.
+                </p>
+                <img src="./img/exhibition8.jpg" />
               </div>
             </div>
-            <div class="content2_control">
-              <span class="page">01&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;08</span>
-              <button type="button"><span class="pause">정지</span></button>
-            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-stop"></div>
+            <div class="swiper-button-prev prev"></div>
+            <div class="swiper-button-next next"></div>
           </div>
         </div>
       </div>
@@ -599,5 +654,31 @@
       </footer>
     </div>
     <!-- //#wrap -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        parallax: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      $(".swiper-stop").on("mouseover", function () {
+        swiper.autoplay.stop();
+      });
+      $(".swiper-stop").on("mouseout", function () {
+        swiper.autoplay.start();
+      });
+    </script>
   </body>
 </html>
